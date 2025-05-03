@@ -4,7 +4,6 @@
 
 ### Replicate the Conda Environment
 
-```bash
 
 ## Step 1::
 
