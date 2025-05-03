@@ -8,11 +8,15 @@ def process_text(text):
     # inside your STT script after getting the transcription
     transcribed_text = text
 
-    response = requests.post(
-        "http://localhost:5002/speak",
-        json={"text": transcribed_text}
-    )
-
+    try:
+        response = requests.post(
+            "http://localhost:5002/speak",
+            json={"text": transcribed_text}
+        )
+    except Exception as e:
+        print(f"Error sending text to server: {e}")
+        print("TTS server is not running or not reachable.")
+        return
     print(response.json())
 
 if __name__ == '__main__':

@@ -1,23 +1,34 @@
 # AI_waitress
+### Replicate the Conda Environment
 
-### How to Replicate the Environment
+```bash
 
-To set up the environment for this project, you’ll need Anaconda installed on your system. Follow these steps:
+## Step 1::
 
-1. **Clone the Model Repository**:
-   - Use the following command in your terminal or command prompt to clone the repository:
-     ```
-     git clone git@github.com:vvikasreddy/AI_waitress.git
-     ```
+# 1. Clone the repo and cd in
+git clone https://github.com/vvikasreddy/AI_waitress.git
+cd AI_waitress
 
-2. **Install Dependencies**:
-   - Open the Anaconda Prompt (available after installing Anaconda).
-   - Navigate to the cloned repository’s directory (e.g., `cd AI_waitress`).
-   - Run these commands to create and activate the environment:
-     ```
-     conda env create -f environment.yml
-     conda activate verbi
-     ```
-   - The first command creates the environment using the `environment.yaml` file, and the second activates it, switching you to the `verbi` environment.
+# 2. Create & activate the Conda env (named “verbi” per environment.yml)
+conda env create -f environment.yml
+conda activate ai_waitress
 
-**Note**: Anaconda must be installed beforehand. Download it from [anaconda.com](https://www.anaconda.com/products/distribution) if you haven’t already.
+# 3. (Optional) If you also maintain a requirements.txt for pure-pip installs:
+pip install -r requirements.txt
+
+
+## Step 2::
+## Quick Start: Run Restaurant & Customer
+
+Open **two** Command Prompt windows and in each one run the following:
+
+1. **Window 1 – Restaurant Backend**  
+   ```bat
+   conda activate ai_waitress
+   python main.py
+2. **Window 2 – Customer Simulation**  
+    ```bat
+    conda activate ai_waitress
+    python customer.py
+    ```
+
